@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- external css files  -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="animate.min.css">
+    <title>My Account | Welcome</title>
+
+    <style>
+        .my-account .card{
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .card{
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #form-overlay{
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            opacity: 0.7;
+            z-index: 9;
+            display: none;
+        }
+
+
+        #profile-form, #payment-form, #address-form{
+            display: none;
+            width: 70%;
+            background-color: white;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            padding: 30px 50px;
+            margin: 30px;
+            z-index: 10;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #profile-form .btn, #payment-form .btn, #address-form .btn{
+            color: white;
+            font-weight: 600;
+        }
+
+        @media(max-width: 768px){
+            #profile-form, #payment-form, #address-form{
+                width: 80%;
+                margin: 10px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media(max-width: 576px){
+            #profile-form, #payment-form, #address-form{
+                width: 85%;
+                margin: 10px;
+                padding: 10px;
+            }
+        }
+
+
+        .cancel{
+            padding: 10px 20px;
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            top: -20px;
+            right: -10px;
+            color: orange;
+            font-size: 25px;
+            font-weight: 700;
+            border: 1px solid lightgrey;
+            cursor: pointer;
+        }
+
+    
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container my-account">
+        <h1>My Account.</h1>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-lg">
+                    <h3 class="text-center">User Profile</h3>
+                    <hr class="my-2">
+                    <p>Username: Lebohang</p>
+                    <p>Email: Lebohang</p>
+                    <p>Password: *******</p>
+                    <button class="btn btn-md btn-warning" onclick="showProfile()">Update</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-lg">
+                    <h3>Payment Info</h3>
+                    <hr class="my-2">
+                    <p>Bank: N/A</p>
+                    <p>Credit Card No: N/A</p>
+                    <p>Pin: *******</p>
+
+                    <button class="btn btn-md btn-warning" onclick="showPayment()">Update</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-lg">
+                    <h3>Address Information</h3>
+                    <hr class="my-2">
+                    <p>Country: N/A</p>
+                    <p>City: N/A</p>
+                    <p>Suburb: N/A</p>
+                    <p>Postal Code: N/A</p>
+                    <button class="btn btn-md btn-warning" onclick="showAddress()">Update</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- forms  -->
+
+    <div id="form-overlay"></div>
+
+    <!-- user profile form  -->
+
+    <div id="profile-form" class="update-form-wrapper">
+        <span class="cancel">X</span>
+        <div id="profile-form-inner">
+            <h1 class="text-center mb-4">Update Profile info.</h1>
+            <br>
+            <form action="">
+
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" id="username" placeholder="Username">
+                </div>
+    
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email Address">
+                </div>
+    
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
+                </div>
+    
+                <div class="form-group">
+                    <input type="password" name="cofirm_password" class="form-control" id="confirm_password" placeholder="Cofirm Password">
+                </div>
+    
+                <div class="form-group">
+                    <input type="submit" class="btn btn-md btn-warning" value="update">
+                </div>
+    
+            </form>
+
+        </div>
+        
+    </div>
+
+
+
+    <!-- payment info  -->
+    <div id="payment-form" class="update-form-wrapper">
+        <span class="cancel">X</span>
+
+        <div id="payment-form-inner">
+            <h1 class="text-center mb-4">Update Payment info.</h1>
+            <br>
+            <form action="">
+                <div class="form-group">
+                    <select name="bank" id="bank" class="form-control">
+                        <option value="Capitec Bank">Capitec Bank</option>
+                        <option value="FNB">FNB</option>
+                        <option value="Standard Bank">Standard Bank</option>
+                        <option value="Nedbank">Nedbank</option>
+                        <option value="ABSA">ABSA</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <input type="text" name="credit_card" class="form-control" id="credit_card" placeholder="Credit Card">
+                </div>
+    
+                <div class="form-group">
+                    <input type="password" name="pin" class="form-control" id="pin" placeholder="Enter Pin">
+                </div>
+    
+                <div class="form-group">
+                    <input type="password" name="confirm_pin" class="form-control" id="confirm_pin" placeholder="Confirm Pin">
+                </div>
+    
+                <div class="form-group">
+                    <input type="submit" class="btn btn-md btn-warning" value="update payment info">
+                </div>
+    
+            </form>
+        </div>
+        
+    </div>
+
+
+
+    <!-- address Information  -->
+    <div id="address-form" class="update-form-wrapper shadow-lg">
+        <span class="cancel">X</span>
+        <div id="address-form-inner">
+            <h2 class="text-cente">Update Address Information</h2>
+            <br>
+            <form action="">
+
+                <div class="form-group">
+                    <input type="text" name="country" class="form-control" id="country" placeholder="Country">
+                </div>
+    
+                <div class="form-group">
+                    <input type="text" name="city" id="city" class="form-control" placeholder="City">
+                </div>
+    
+    
+                <div class="form-group">
+                    <input type="text" name="suburb" id="suburb" class="form-control" placeholder="Suburb">
+                </div>
+    
+                <div class="form-group">
+                    <input type="text" name="postal_code" id="postal_code" class="form-control" placeholder="Postal Code">
+                </div>
+    
+                <div class="form-group">
+                    <input type="submit" class="btn btn-md btn-warning" value="update address info">
+                </div>
+    
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+
+        const profileWrapper = document.querySelector('#profile-form');
+        const paymentWrapper = document.querySelector('#payment-form');
+        const addressWrapper = document.querySelector('#address-form');
+        const overlay = document.querySelector('#form-overlay');
+
+        function showProfile(){
+            paymentWrapper.style.display = 'none';
+            addressWrapper.style.display = 'none';
+
+            overlay.style.display = 'block';
+            profileWrapper.style.display = 'block';
+
+        }
+
+
+        function showPayment(){
+            profileWrapper.style.display = 'none'
+            addressWrapper.style.display = 'none';
+
+            overlay.style.display = 'block';
+            paymentWrapper.style.display = 'block';
+
+        }
+
+
+        function showAddress(){
+            profileWrapper.style.display = 'none';
+            paymentWrapper.style.display = 'none';
+            
+            overlay.style.display = 'block';
+            addressWrapper.style.display = 'block';
+        }
+
+        // remove modal 
+        const cancelBtns =  document.querySelectorAll('.cancel');
+
+        cancelBtns.forEach(btn => {
+
+            btn.addEventListener('click', (event) => {
+                overlay.style.display = 'none';
+                profileWrapper.style.display = 'none';
+                paymentWrapper.style.display = 'none';
+                addressWrapper.style.display = 'none';
+            })
+
+        })
+
+        
+
+
+
+        
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

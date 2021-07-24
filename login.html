@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Welcome</title>
+
+    <!-- external css libraries  -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="animate.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #login-wrapper{
+            width: 100%;
+            height: 100vh;
+        }
+
+        #login-header{
+            width: 100%;
+            height: 8vh;
+            background-color: white;
+        }
+
+        #login-header a{
+            font-size: 25px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        #login-header a span:first-child{
+            color: grey;
+        }
+
+        #login-header a span:last-child{
+            color: orange;
+            margin-left: -5px;
+        }
+
+        #login-body{
+            height: 92vh;
+        }
+
+        #login-body form{
+            width: 350px;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px;
+        }
+
+        #login-body .btn{
+            color: white !important;
+            font-weight: 600;
+        }
+
+        #login-body p a{
+            color: orange;
+        }
+
+    </style>
+</head>
+<body class="bg-light">
+
+    <div id="login-wrapper">
+
+        <div id="login-header">
+            <a href="index.html" class="btn">
+                <span>place</span>
+                <span>holder</span>
+            </a>
+        </div>
+
+        <div id="login-body">
+
+            <form action="" class="card shadow-lg">
+                <h3 class="text-center mb-4 animated bounce">Log in.</h3>
+           
+                <div class="form-group">
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Email Address">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="password" class="form-control" name="password" placeholder="Enter Password">
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-md btn-warning animated wobble" value="Login">
+                </div>
+
+                <p class="text-center font-weight-light">Forgot password,  click <a href="#">here</a></p>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

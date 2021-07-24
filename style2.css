@@ -1,0 +1,334 @@
+.questions {
+  display: grid;
+  place-content: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* background-color: rgba(0,0,0,0.57); */
+}
+
+.quiz-head {
+  text-align: center;
+}
+
+.quiz-head h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.questions h3 {
+  /* text-align: center; */
+  /* background-color: tomato; */
+  padding: 15px 0px;
+  /* width: 250px; */
+  /* margin: 0 20px; */
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.77);
+}
+
+.ques-ans {
+  /* display: grid;
+    place-content: center; */
+  margin: auto;
+}
+
+.ques-ans div h2 {
+  /* background-color: royalblue; */
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.ques-ans div p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.57);
+  word-wrap: normal;
+  margin-top: 20px;
+}
+
+.hero {
+  display: grid;
+  place-content: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 10px auto;
+}
+
+.hero-items {
+  display: grid;
+  place-content: center;
+}
+
+.hero-item1 {
+  text-align: center;
+  padding-bottom: 20px;
+  background-color: rgba(247, 164, 11, 0.877);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.77);
+}
+
+.hero-item1 h2 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+.hero-item1 p {
+  margin-top: -20px;
+  color: rgba(240, 240, 240, 0.89);
+}
+.hero-item1 p::first-letter {
+  text-transform: uppercase;
+}
+.hero-item1 p::after {
+  content: ".";
+}
+
+.hero-item1 .hero-group {
+  /* background-color: rgba(0,0,0,0.77); */
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-group input {
+  padding: 5px;
+  width: 100%;
+  border: none;
+  background-color: rgba(240, 240, 240, 0.89);
+}
+
+.hero-group .fas {
+  /* background-color: royalblue; */
+  padding: 4.5px;
+  position: absolute;
+  top: 0.5px;
+  left: 160px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+.hero-group .fas::before {
+  content: icon;
+
+  border: 3px solid rgba(0, 0, 0, 0.27);
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  padding-left: 4px;
+}
+
+.hero-item2 {
+  text-align: center;
+  background-color: rgba(240, 240, 240, 0.79);
+}
+
+.hero-item2 .item2 h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+}
+
+.hero-item2 .item2 p::first-letter {
+  text-transform: capitalize;
+}
+
+.hero-item2 .item2 p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+.hero-item3 {
+  text-align: center;
+  margin: 0px auto;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.57);
+  color: rgba(240, 240, 240, 0.89);
+}
+
+.hero-item3 h2 {
+  text-align: center;
+  /* background-color: rgba(247, 164, 11, 0.877); */
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.hero-item3 h2 span {
+  color: rgba(247, 164, 11, 0.877);
+}
+
+.hero-item3 .item3-content h4 {
+  /* background-color: rgba(247, 164, 11, 0.877); */
+  text-align: left;
+  color: rgba(247, 164, 11, 0.877);
+  text-transform: capitalize;
+  padding: 0px 10px;
+}
+
+.zero {
+  display: grid;
+  place-content: center;
+  background-color: rgba(0, 0, 0, 0.57);
+  margin: 10px 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.zero .zero-items {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.zero-items h1 {
+  text-align: center;
+  text-transform: capitalize;
+  color: rgba(247, 164, 11, 0.877);
+  font-weight: 500;
+}
+
+/* .zero-items .zero-item1{
+    margin: 0 auto;
+} */
+
+.zero-item1 h2 {
+  margin-left: 7px;
+  text-transform: capitalize;
+  color: rgba(240, 240, 240, 0.79);
+  font-weight: 300;
+}
+
+.zero-items > .zero-item1 > p {
+  font-weight: 200;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.79);
+  padding: 0 10px;
+}
+
+.form {
+  display: grid;
+  place-items: center;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form h1 {
+  margin: 0 0 20px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.79);
+}
+
+.form p {
+  margin: 0 0 5px;
+}
+
+.form .fas {
+  margin: 20px 10px 0;
+  font-size: 72px;
+  color: rgba(247, 164, 11, 0.877);
+}
+
+.fa-envelope {
+  transform: rotate(-20deg);
+
+}
+
+.fa-at,
+.fa-mail-bulk {
+  transform: rotate(10deg);
+}
+
+.form input,
+textarea {
+  width: calc(100% - 18px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(247, 164, 11, 0.877);
+}
+
+.form input::placeholder {
+  color: rgba(0, 0, 0, 0.77);
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: rgba(247, 164, 11, 0.877);
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(240, 240, 240, 0.79);
+}
+
+.form button:hover {
+  background-color: rgba(230, 154, 15, 0.788);
+}
+
+/* ****************** */
+/* stuff in the body */
+/* **************** */
+
+.stuff{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  flex-flow: column wrap;
+  
+  place-content: center;
+}
+
+.stuff h1{
+  font-weight: 500;
+  font-size: 2.6em;
+  text-align: center;
+  margin: 10px auto;
+  text-transform: capitalize;
+  color: rgba(230, 154, 15, 0.788);
+  width: 400px;
+  border-bottom:1px solid rgba(0, 0, 0, 0.87);
+}
+
+
+.stuff div h3{
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.77);
+  text-align: center;
+  font-size: 2.1em ;
+  text-transform: capitalize;
+}
+
+
+
+.stuff div p{
+  font-weight:100;
+  font-size: 1rem;
+  margin: -15px auto;
+  text-align:center;
+  color:rgba(0, 0, 0, 0.87);
+  width: calc(100vw - 100px);
+}
+
+
+.stuff .term p{
+  margin-top: 35px;
+}
+
+@media (min-width: 450px) {
+  .form-item {
+    flex-direction: row;
+  }
+  .left-part,
+  form {
+    width: 50%;
+  }
+
+  .left-part{
+    display: flex;
+    flex-direction: column;
+  }
+}
